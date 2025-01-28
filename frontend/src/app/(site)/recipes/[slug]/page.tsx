@@ -5,8 +5,36 @@ import Image from "next/image";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import AddIcon from "@mui/icons-material/Add";
 import PrintIcon from "@mui/icons-material/Print";
+import { REVALIDATE_CACHE_LONG } from "@/constants";
 
-export default function RecipesPage() {
+export const revalidate = REVALIDATE_CACHE_LONG;
+
+// We'll prerender only the params from `generateStaticParams` at build time.
+// If a request comes in for a path that hasn't been generated,
+// Next.js will server-render the page on-demand.
+export const dynamicParams = true; // or false, to 404 on unknown paths
+
+export async function generateStaticParams() {
+  // TODO: Replace this with your own data fetching
+  //   const response = await useGetAllTagSlugsQuery.fetcher({})()
+  //   return (
+  //     response.tagCollection?.items.map((item) => ({
+  //       slug: slugify(item?.name || ''),
+  //     })) || []
+  //   )
+}
+
+export default async function RecipesPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  // TODO: Replace this with your own data fetching
+  //   const slug = (await params).slug;
+  //   const post = await fetch(`https://api.vercel.app/blog/${id}`).then(
+  //     (res) => res.json()
+  //   );
+
   return (
     <Container className="py-10">
       <Grid2 container spacing={2}>
