@@ -11,11 +11,7 @@ This repository contains my submission for the fullstack assessment. The project
 ```
 
 ### Frontend
-The `frontend` folder contains the implementation of the user interface. It is built using Next.js (latest version 15.x) with the App Router feature for modern and efficient routing.
-
-#### Features
-- Utilizes Next.js 15.x with the App Router for optimized routing and server-side rendering.
-- Modern and scalable architecture for frontend development.
+The `frontend` folder contains the implementation of the user interface. It is built using Next.js + MUI (latest version 15.x) with the App Router feature for modern and efficient routing.
 
 #### Setup Instructions
 1. Navigate to the `frontend` directory:
@@ -34,11 +30,6 @@ The `frontend` folder contains the implementation of the user interface. It is b
 
 ### Backend
 The `backend` folder contains the server-side implementation. It is designed to provide robust and secure APIs to support the frontend.
-
-#### Features
-- Provides a comprehensive API layer for frontend integration.
-- Designed for scalability and efficient handling of requests.
-- Includes automated test scripts to ensure code quality and reliability.
 
 #### Setup Instructions
 1. Navigate to the `backend` directory:
