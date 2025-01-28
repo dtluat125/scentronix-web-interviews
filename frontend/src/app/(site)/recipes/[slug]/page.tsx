@@ -22,9 +22,11 @@ export async function generateStaticParams() {
   //       slug: slugify(item?.name || ''),
   //     })) || []
   //   )
+  return [];
 }
 
 export default async function RecipesPage({
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   params,
 }: {
   params: { slug: string };

@@ -1,6 +1,7 @@
 "use client";
 
 import Container from "@/components/layout/Container";
+import { routes } from "@/constants/routes";
 import Person2OutlinedIcon from "@mui/icons-material/Person2Outlined";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
@@ -11,11 +12,11 @@ import { usePathname } from "next/navigation";
 import { twMerge } from "tailwind-merge";
 
 const links = [
-  { label: "shop", path: "/shop" },
-  { label: "recipes", path: "/recipes" },
-  { label: "learn", path: "/learn" },
-  { label: "baking school", path: "/baking-school" },
-  { label: "impact", path: "/impact" },
+  { label: "shop", path: routes.shop },
+  { label: "recipes", path: routes.recipes },
+  { label: "learn", path: routes.learn },
+  { label: "baking school", path: routes.bakingSchool },
+  { label: "impact", path: routes.impact },
 ];
 
 const subLinks = [
@@ -47,7 +48,7 @@ export default function Header() {
             <div className="ml-20 uppercase">
               <ul className="px-10 flex justify-between shrink text-sm gap-[60px]">
                 {links.map((link) => {
-                  const isActive = pathname === link.path;
+                  const isActive = pathname.includes(link.path);
                   return (
                     <li key={`${link.label}-${link.path}`}>
                       <Link
